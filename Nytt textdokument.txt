@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp53
+{
+    class Program
+    {
+        public static void Main()
+        {
+            Random slump = new Random();
+            int slumptal = slump.Next(1, 100);
+            int counter = 0;
+            Console.WriteLine("Gissa på ett tal mellan 1 och 100");
+            int tal = int.Parse(Console.ReadLine());
+            
+            while (slumptal <= 100)       
+                if (slumptal == tal)
+                {
+                  counter++;
+                  Console.WriteLine("Antal gissningar: " + counter);
+                  Console.WriteLine("det är rätt tal");
+                  break;
+                }
+
+                else if (slumptal > tal)
+                {
+                    counter++;
+                    Console.WriteLine("gissningen är för låg");
+                    tal = int.Parse(Console.ReadLine());
+                }
+                else if (slumptal < tal)
+                {
+                    counter++;
+                    Console.WriteLine("gissningen är för hög");
+                    tal = int.Parse(Console.ReadLine());
+                }
+                                                                         
+        }
+    }
+}
