@@ -33,15 +33,17 @@ namespace WindowsFormsApp2
             if (slumptal == tal)
                 {
                     counter++;               
-                    label3.Text = ("Det är rätt tal");    
+                    label3.Text = ("Det är rätt tal");
+                    label2.Text = counter.ToString();
                 }
 
                 else if (slumptal > tal)
                 {
                     counter++;
                     label3.Text = "Gissningen är för låg";
+                    label2.Text = counter.ToString();
             }
-                else if (slumptal < tal)
+                else
                 {
                     label3.Text = "Gissningen är för hög";
                     counter++;
